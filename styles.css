@@ -1,0 +1,350 @@
+:root {
+    --primary: #2E4057;
+    --secondary: #66A182;
+    --tertiary: #97B8A6;
+    --light: #D8DBC7;
+    --text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.author-info {
+    text-align: center;
+}
+
+.color-scheme {
+    margin: 2rem 0;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.harmony-type {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-left: 4px solid var(--secondary);
+    background-color: rgba(102, 161, 130, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid var(--tertiary);
+    text-align: left;
+}
+
+th {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tool-card {
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid var(--tertiary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 3rem;
+}
+
+.color-playground {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.base-color-control, .harmony-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.generated-palette {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.palette-color {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.palette-color:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.palette-color .color-info {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: max-content;
+    text-align: center;
+}
+
+.palette-color:hover .color-info {
+    opacity: 1;
+}
+
+.color-info span {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.copy-feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    animation: fade-out 1s forwards;
+}
+
+.animate-in {
+    animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.color-transition {
+    transition: all 0.5s ease;
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.preview-container {
+    border: 1px solid var(--tertiary);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.element-group {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.element-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-style: italic;
+}
+
+.preview-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.preview-text {
+    line-height: 1.6;
+}
+
+.preview-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.preview-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.preview-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preview-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.preview-border {
+    height: 2px;
+    border-radius: 1px;
+    background-color: currentColor;
+    margin: 1rem 0;
+}
+
+.preview-card {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+.preview-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.element-explanation {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+input[type="color"] {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--tertiary);
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,199 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonias Cromáticas no Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "chroma-js": "https://esm.sh/chroma-js@2.4.2"
+        }
+    }
+    </script>
+    <script type="module" src="colorplay.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Harmonias Cromáticas no Design</h1>
+    </header>
+
+    <section class="author-info">
+        <h2>Sobre este site</h2>
+        <p>Por: Lucas</p>
+        <div class="color-scheme">
+            <h3>Harmonia utilizada: Análoga</h3>
+            <div class="color-palette">
+                <div class="color-box" style="background-color: #2E4057" title="RGB: 46, 64, 87"></div>
+                <div class="color-box" style="background-color: #66A182" title="RGB: 102, 161, 130"></div>
+                <div class="color-box" style="background-color: #97B8A6" title="RGB: 151, 184, 166"></div>
+                <div class="color-box" style="background-color: #D8DBC7" title="RGB: 216, 219, 199"></div>
+            </div>
+            <div style="margin-top: 1rem; font-size: 0.9em;">
+                <p>Valores RGB:</p>
+                <ul style="list-style: none;">
+                    <li>#2E4057 (RGB: 46, 64, 87)</li>
+                    <li>#66A182 (RGB: 102, 161, 130)</li>
+                    <li>#97B8A6 (RGB: 151, 184, 166)</li>
+                    <li>#D8DBC7 (RGB: 216, 219, 199)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="color-playground">
+        <h2>Playground de Cores</h2>
+        <div class="controls">
+            <div class="base-color-control">
+                <label for="baseColor">Cor Base:</label>
+                <input type="color" id="baseColor" value="#2E4057">
+            </div>
+            <div class="harmony-control">
+                <label for="harmonyType">Tipo de Harmonia:</label>
+                <select id="harmonyType">
+                    <option value="analogous">Análoga</option>
+                    <option value="monochromatic">Monocromática</option>
+                    <option value="complementary">Complementar</option>
+                    <option value="triadic">Triádica</option>
+                </select>
+            </div>
+        </div>
+        <div class="generated-palette"></div>
+        <div class="preview-section">
+            <h3>Visualização</h3>
+            <div class="preview-container">
+                <div class="preview-header">Cabeçalho</div>
+                <div class="preview-content">
+                    <h4>Título da Seção</h4>
+                    <p>Este é um exemplo de texto para demonstrar como as cores se comportam em diferentes elementos.</p>
+                    <a href="#" class="preview-link">Link de exemplo</a>
+                    <button class="preview-button">Botão</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="circulo-cromatico">
+            <h2>O Círculo Cromático</h2>
+            <p>O círculo cromático é uma ferramenta essencial no design que organiza as cores de forma sistemática, permitindo compreender suas relações e interações. Esta representação circular das cores serve como base para criar combinações harmoniosas e eficazes em projetos de design.</p>
+            
+            <h3>Estrutura do Círculo Cromático</h3>
+            <ul>
+                <li><strong>Cores Primárias:</strong> São as cores puras e básicas (vermelho, azul e amarelo), das quais todas as outras cores podem ser derivadas. Não podem ser criadas pela mistura de outras cores.</li>
+                <li><strong>Cores Secundárias:</strong> Surgem da mistura de duas cores primárias em proporções iguais:
+                    <ul>
+                        <li>Vermelho + Amarelo = Laranja</li>
+                        <li>Amarelo + Azul = Verde</li>
+                        <li>Azul + Vermelho = Roxo</li>
+                    </ul>
+                </li>
+                <li><strong>Cores Terciárias:</strong> São criadas pela mistura de uma cor primária com uma secundária adjacente, resultando em cores como vermelho-alaranjado, amarelo-esverdeado, azul-arroxeado, etc.</li>
+            </ul>
+
+            <h3>Propriedades das Cores</h3>
+            <ul>
+                <li><strong>Matiz:</strong> É a cor pura, sem adição de branco ou preto</li>
+                <li><strong>Saturação:</strong> Refere-se à intensidade ou pureza da cor</li>
+                <li><strong>Valor/Brilho:</strong> É a luminosidade da cor, determinada pela adição de branco ou preto</li>
+            </ul>
+        </section>
+
+        <section id="harmonias">
+            <h2>Tipos de Harmonias Cromáticas</h2>
+            
+            <div class="harmony-type">
+                <h3>Monocromática</h3>
+                <p>Utiliza variações de uma única cor, alterando sua saturação e brilho. Ideal para designs minimalistas e elegantes.</p>
+            </div>
+
+            <div class="harmony-type">
+                <h3>Análoga</h3>
+                <p>Utiliza cores adjacentes no círculo cromático. Cria designs suaves e confortáveis visualmente.</p>
+            </div>
+
+            <div class="harmony-type">
+                <h3>Complementar</h3>
+                <p>Usa cores opostas no círculo cromático. Gera alto contraste e impacto visual.</p>
+            </div>
+
+            <div class="harmony-type">
+                <h3>Triádica</h3>
+                <p>Utiliza três cores equidistantes no círculo cromático. Oferece contraste vibrante mantendo harmonia.</p>
+            </div>
+        </section>
+
+        <section id="aplicacao">
+            <h2>Aplicação das Cores em Elementos Web</h2>
+            <table>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Recomendação</th>
+                </tr>
+                <tr>
+                    <td>Cabeçalhos</td>
+                    <td>Utilize cores escuras (60-80% de saturação) da paleta principal para criar hierarquia visual. Mantenha consistência entre níveis de cabeçalho usando variações da mesma cor.</td>
+                </tr>
+                <tr>
+                    <td>Parágrafos</td>
+                    <td>Use cores neutras escuras (preto 80-90% ou cinza escuro) sobre fundos claros. Mantenha contraste mínimo de 4.5:1 para garantir acessibilidade.</td>
+                </tr>
+                <tr>
+                    <td>Links</td>
+                    <td>Escolha cores que contrastem com o texto regular, preferencialmente da paleta secundária. Considere diferentes estados (hover, visited, active) usando variações da mesma cor.</td>
+                </tr>
+                <tr>
+                    <td>Bordas e Divisores</td>
+                    <td>Opte por tons suaves (20-40% de saturação) para elementos sutis. Use cores mais vibrantes para destacar elementos importantes.</td>
+                </tr>
+                <tr>
+                    <td>Fundos</td>
+                    <td>Priorize cores claras ou neutras (10-20% de saturação) para áreas grandes. Use cores mais saturadas apenas em áreas de destaque ou elementos menores.</td>
+                </tr>
+                <tr>
+                    <td>Elementos de Destaque</td>
+                    <td>Reserve cores mais vibrantes e saturadas para call-to-actions, botões e elementos que necessitam de atenção imediata.</td>
+                </tr>
+                <tr>
+                    <td>Ícones e Gráficos</td>
+                    <td>Mantenha consistência usando cores da paleta principal. Ajuste a saturação conforme a hierarquia de importância.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="ferramentas">
+            <h2>Ferramentas para Criação de Paletas</h2>
+            <div class="tools-grid">
+                <a href="https://coolors.co" target="_blank" class="tool-card">
+                    <h3>Coolors</h3>
+                    <p>Gerador de paletas de cores com interface intuitiva</p>
+                </a>
+                <a href="https://color.adobe.com" target="_blank" class="tool-card">
+                    <h3>Adobe Color</h3>
+                    <p>Ferramenta profissional com várias regras de harmonia</p>
+                </a>
+                <a href="https://paletton.com" target="_blank" class="tool-card">
+                    <h3>Paletton</h3>
+                    <p>Criação de paletas com visualização em tempo real</p>
+                </a>
+                <a href="https://colorhunt.co" target="_blank" class="tool-card">
+                    <h3>Color Hunt</h3>
+                    <p>Paletas prontas criadas pela comunidade</p>
+                </a>
+                <a href="https://mycolor.space" target="_blank" class="tool-card">
+                    <h3>ColorSpace</h3>
+                    <p>Gerador de gradientes e paletas harmônicas</p>
+                </a>
+                <a href="https://materialui.co/colors" target="_blank" class="tool-card">
+                    <h3>Material Design Colors</h3>
+                    <p>Paletas baseadas no Material Design do Google</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para estudo de Harmonias Cromáticas</p>
+    </footer>
+</body>
+</html>
